@@ -1,65 +1,467 @@
-import Image from "next/image";
-
 export default function Home() {
+  const whatsappNumber = "5588994939014";
+
+  const services = [
+    { title: "Abertura de Empresa", text: "Abrimos sua empresa de forma rápida, segura e sem burocracia.", icon: "▦" },
+    { title: "Baixa e Regularização", text: "Regularizamos pendências e realizamos baixa empresarial com segurança.", icon: "✓" },
+    { title: "Contabilidade Mensal", text: "Gestão contábil completa para empresas modernas e organizadas.", icon: "▤" },
+    { title: "Imposto de Renda", text: "Declarações para pessoa física e jurídica com agilidade e segurança.", icon: "◷" },
+    { title: "Consultoria Tributária", text: "Estratégias inteligentes para reduzir riscos e melhorar resultados.", icon: "◆" },
+    { title: "Departamento Pessoal", text: "Folha de pagamento, admissões, rescisões e obrigações trabalhistas.", icon: "♙" },
+    { title: "Planejamento Tributário", text: "Planejamento fiscal para empresas pagarem impostos corretamente.", icon: "◎" },
+    { title: "MEI, ME e EPP", text: "Soluções especializadas para pequenos e médios negócios.", icon: "◈" },
+  ];
+
+  const diferenciais = [
+    { title: "Atendimento Humanizado", text: "Suporte próximo, rápido e com foco total na necessidade do cliente." },
+    { title: "Estratégia Tributária", text: "Planejamento inteligente para reduzir riscos e otimizar resultados." },
+    { title: "Atendimento Online", text: "Atendemos empresas de qualquer lugar com praticidade e agilidade." },
+    { title: "Segurança Fiscal", text: "Processos organizados e acompanhamento completo das obrigações." },
+  ];
+
+  const numeros = [
+    { number: "+500", label: "Clientes atendidos" },
+    { number: "+100", label: "Empresas regularizadas" },
+    { number: "100%", label: "Atendimento humanizado" },
+    { number: "Brasil", label: "Atendimento online" },
+  ];
+
+  const depoimentos = [
+    { text: "Atendimento rápido, profissional e muito claro. A Zycont trouxe mais segurança para minha empresa.", author: "Cliente Zycont" },
+    { text: "Minha empresa ficou muito mais organizada depois do acompanhamento contábil da Zycont.", author: "Empresário atendido" },
+    { text: "Excelente suporte. Sempre explicam tudo com clareza e ajudam nas decisões da empresa.", author: "Cliente empresarial" },
+  ];
+
+  function whatsappLink(servico: string) {
+    const message = `Olá! Vim pelo site da Zycont e tenho interesse no serviço de ${servico}. Gostaria de mais informações.`;
+    return `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+  }
+
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
+    <main className="bg-[#f7f1e8] text-[#111] overflow-hidden scroll-smooth">
+      <style>{`
+        html { scroll-behavior: smooth; }
+
+        @keyframes fadeUp {
+          from { opacity: 0; transform: translateY(35px); }
+          to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes floatImage {
+          0%, 100% { transform: translateY(0); }
+          50% { transform: translateY(-12px); }
+        }
+
+        .fade-up { animation: fadeUp .9s ease both; }
+        .float-image { animation: floatImage 5s ease-in-out infinite; }
+      `}</style>
+
+      <header className="max-w-7xl mx-auto px-8 py-8 flex items-center justify-between fade-up">
+        <img src="/logo.png" alt="Zycont" className="w-[420px]" />
+
+        <nav className="hidden md:flex gap-12 text-lg font-medium">
+          <a href="#inicio" className="text-[#b8892d]">Início</a>
+          <a href="#servicos">Serviços</a>
+          <a href="#sobre">Sobre</a>
+          <a href="#contato">Contato</a>
+        </nav>
+
+        <a
+          href={`https://wa.me/${whatsappNumber}`}
+          target="_blank"
+          className="hidden md:flex bg-[#b8892d] text-white px-8 py-4 rounded-xl font-semibold shadow-xl hover:scale-105 hover:shadow-2xl transition duration-300"
+        >
+          Falar com especialista
+        </a>
+      </header>
+
+      <section id="inicio" className="max-w-7xl mx-auto px-8 pt-10 pb-24 grid md:grid-cols-2 gap-20 items-center">
+        <div className="fade-up">
+          <p className="text-[#b8892d] tracking-[0.35em] font-semibold mb-6">
+            CONTABILIDADE INTELIGENTE
+          </p>
+
+          <h1 className="text-6xl md:text-7xl font-bold leading-tight mb-10">
+            Soluções modernas para sua empresa crescer.
           </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
+
+          <div className="w-20 h-1 bg-[#b8892d] mb-10" />
+
+          <p className="text-[#3b342d] text-2xl leading-relaxed max-w-xl mb-12">
+            Atendimento premium, suporte estratégico e soluções contábeis completas para empresas e profissionais que desejam crescer com segurança.
+          </p>
+
+          <div className="flex gap-5 flex-wrap">
             <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
+              href={`https://wa.me/${whatsappNumber}`}
+              target="_blank"
+              className="bg-[#b8892d] text-white px-10 py-5 rounded-xl font-semibold shadow-xl hover:scale-105 transition duration-300"
             >
-              Templates
-            </a>{" "}
-            or the{" "}
+              Falar com especialista
+            </a>
+
             <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
+              href="#servicos"
+              className="border border-[#b8892d] text-[#b8892d] px-10 py-5 rounded-xl font-semibold hover:bg-[#b8892d]/10 hover:scale-105 transition duration-300"
             >
-              Learning
-            </a>{" "}
-            center.
+              Conhecer serviços →
+            </a>
+          </div>
+        </div>
+
+        <div className="relative flex justify-center fade-up">
+          <div className="absolute top-10 right-[-30px] w-[520px] h-[620px] border border-[#d8bc87] rounded-[40px] rotate-6" />
+
+          <img
+            src="/bruno.jpeg"
+            alt="Bruno Oliveira"
+            className="relative w-[520px] rounded-[35px] shadow-2xl object-cover float-image"
+          />
+        </div>
+      </section>
+
+      <section className="py-24 bg-[#111] text-white">
+        <div className="max-w-7xl mx-auto px-8">
+          <div className="text-center mb-16 fade-up">
+            <p className="text-[#d8bc87] tracking-[0.3em] font-semibold mb-4">
+              DIFERENCIAIS
+            </p>
+
+            <h2 className="text-5xl font-bold">
+              Por que escolher a Zycont?
+            </h2>
+          </div>
+
+          <div className="grid md:grid-cols-4 gap-7">
+            {diferenciais.map((item) => (
+              <div
+                key={item.title}
+                className="bg-[#1a1a1a] border border-[#d8bc87]/20 rounded-[28px] p-8 hover:-translate-y-2 hover:border-[#d8bc87]/50 hover:shadow-2xl transition duration-300"
+              >
+                <div className="w-14 h-14 rounded-2xl bg-[#b8892d]/10 mb-6 flex items-center justify-center">
+                  <div className="w-4 h-4 rounded-full bg-[#d8bc87]" />
+                </div>
+
+                <h3 className="text-2xl font-bold mb-5">
+                  {item.title}
+                </h3>
+
+                <p className="text-gray-300 leading-relaxed">
+                  {item.text}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 bg-[#f7f1e8]">
+        <div className="max-w-7xl mx-auto px-8">
+          <div className="bg-white rounded-[36px] border border-[#eadfce] shadow-xl p-10 grid md:grid-cols-4 gap-8 text-center">
+            {numeros.map((item) => (
+              <div
+                key={item.label}
+                className="border-[#eadfce] md:border-r last:border-r-0"
+              >
+                <h3 className="text-5xl font-bold text-[#b8892d] mb-3">
+                  {item.number}
+                </h3>
+
+                <p className="text-[#5f574d] text-lg">
+                  {item.label}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="servicos" className="py-24 bg-white/60">
+        <div className="max-w-7xl mx-auto px-8">
+          <div className="text-center mb-16">
+            <p className="text-[#b8892d] tracking-[0.3em] font-semibold mb-4">
+              SERVIÇOS
+            </p>
+
+            <h2 className="text-5xl font-bold">
+              Soluções completas para sua empresa
+            </h2>
+          </div>
+
+          <div className="grid md:grid-cols-4 gap-7">
+            {services.map((service) => (
+              <div
+                key={service.title}
+                className="bg-white rounded-[28px] p-8 border border-[#eadfce] shadow-sm hover:shadow-2xl hover:-translate-y-2 transition duration-300 flex flex-col"
+              >
+                <div className="w-16 h-16 rounded-2xl bg-[#f3eadb] mb-6 flex items-center justify-center border border-[#ead7b8] shadow-sm">
+                  <span className="text-[#b8892d] text-3xl font-bold">
+                    {service.icon}
+                  </span>
+                </div>
+
+                <h3 className="text-2xl font-bold mb-5 leading-snug min-h-[70px]">
+                  {service.title}
+                </h3>
+
+                <div className="w-10 h-1 bg-[#b8892d] mb-5" />
+
+                <p className="text-[#5f574d] leading-relaxed mb-8 flex-1">
+                  {service.text}
+                </p>
+
+                <a
+                  href={whatsappLink(service.title)}
+                  target="_blank"
+                  className="mt-auto inline-flex w-full justify-center items-center bg-[#b8892d] text-white px-5 py-3 rounded-xl font-semibold hover:scale-105 hover:bg-[#9f7425] transition duration-300"
+                >
+                  Solicitar pelo WhatsApp
+                </a>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-24 bg-[#f7f1e8]">
+        <div className="max-w-7xl mx-auto px-8">
+          <div className="text-center mb-16">
+            <p className="text-[#b8892d] tracking-[0.3em] font-semibold mb-4">
+              DEPOIMENTOS
+            </p>
+
+            <h2 className="text-5xl font-bold">
+              O que dizem sobre a Zycont
+            </h2>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-7">
+            {depoimentos.map((item) => (
+              <div
+                key={item.author}
+                className="bg-white rounded-[28px] p-8 border border-[#eadfce] shadow-sm hover:shadow-xl hover:-translate-y-2 transition duration-300"
+              >
+                <div className="text-[#b8892d] text-4xl mb-6">
+                  ★★★★★
+                </div>
+
+                <p className="text-[#4b443d] text-xl leading-relaxed mb-8 italic">
+                  “{item.text}”
+                </p>
+
+                <div className="w-12 h-1 bg-[#b8892d] mb-4" />
+
+                <p className="font-bold text-[#111]">
+                  {item.author}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-24 bg-[#111] text-white">
+        <div className="max-w-5xl mx-auto px-8">
+          <div className="text-center mb-16">
+            <p className="text-[#d8bc87] tracking-[0.3em] font-semibold mb-4">
+              FAQ
+            </p>
+
+            <h2 className="text-5xl font-bold">
+              Perguntas frequentes
+            </h2>
+          </div>
+
+          <div className="space-y-6">
+            {[
+              ["Quanto custa abrir uma empresa?", "O valor pode variar conforme o tipo de empresa, atividade e regime tributário. Entre em contato para receber uma análise personalizada."],
+              ["Vocês atendem online?", "Sim. Atendemos clientes de forma online com praticidade, segurança e suporte completo em todo o Brasil."],
+              ["A Zycont atende MEI, ME e EPP?", "Sim. Atuamos com soluções contábeis completas para MEI, Microempresas e Empresas de Pequeno Porte."],
+              ["Vocês fazem imposto de renda?", "Sim. Realizamos declaração de imposto de renda para pessoa física e jurídica com segurança e acompanhamento profissional."],
+              ["Quanto tempo demora para abrir uma empresa?", "O prazo depende da atividade e dos órgãos responsáveis, mas buscamos sempre realizar todo o processo da forma mais rápida possível."],
+            ].map(([q, a]) => (
+              <div
+                key={q}
+                className="bg-[#1a1a1a] border border-[#d8bc87]/20 rounded-[24px] p-8 hover:border-[#d8bc87]/50 transition"
+              >
+                <h3 className="text-2xl font-bold mb-4">
+                  {q}
+                </h3>
+
+                <p className="text-gray-300 leading-relaxed text-lg">
+                  {a}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="sobre" className="max-w-7xl mx-auto px-8 py-24 grid md:grid-cols-2 gap-20 items-center">
+        <div className="relative">
+          <div className="absolute inset-0 bg-[#b8892d]/10 blur-3xl rounded-[40px]" />
+
+          <img
+            src="/sobre.jpeg"
+            alt="Sobre Bruno Oliveira"
+            className="relative rounded-[35px] shadow-2xl"
+          />
+        </div>
+
+        <div>
+          <p className="text-[#b8892d] tracking-[0.3em] font-semibold mb-4">
+            SOBRE A ZYCONT
+          </p>
+
+          <h2 className="text-5xl font-bold mb-8">
+            Contabilidade estratégica e moderna
+          </h2>
+
+          <p className="text-[#4b443d] text-xl leading-relaxed mb-6">
+            A Zycont Contabilidade Inteligente nasceu com o propósito de oferecer soluções modernas, estratégicas e humanizadas para empresas que desejam crescer com segurança.
+          </p>
+
+          <p className="text-[#4b443d] text-xl leading-relaxed">
+            Atuamos com foco em excelência, atendimento premium e suporte completo para MEI, ME, EPP e demais empresas que precisam de uma contabilidade eficiente e atualizada.
           </p>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+      </section>
+
+      <section id="contato" className="bg-[#111] text-white py-24">
+        <div className="max-w-7xl mx-auto px-8 grid md:grid-cols-2 gap-16">
+          <div>
+            <p className="text-[#d8bc87] tracking-[0.3em] font-semibold mb-4">
+              CONTATO
+            </p>
+
+            <h2 className="text-5xl font-bold mb-10">
+              Vamos conversar sobre sua empresa
+            </h2>
+
+            <div className="space-y-8 text-lg">
+              <div>
+                <h3 className="text-[#d8bc87] font-semibold mb-2">
+                  WhatsApp
+                </h3>
+                <p>(88) 99493-9014</p>
+              </div>
+
+              <div>
+                <h3 className="text-[#d8bc87] font-semibold mb-2">
+                  Instagram
+                </h3>
+                <p>@zycont_contabilidade</p>
+              </div>
+
+              <div>
+                <h3 className="text-[#d8bc87] font-semibold mb-2">
+                  E-mail
+                </h3>
+                <p>contato.zycont@gmail.com</p>
+              </div>
+
+              <div>
+                <h3 className="text-[#d8bc87] font-semibold mb-2">
+                  Endereço
+                </h3>
+                <p>
+                  Rua Francisco Aldenir de Jesus, 429
+                  <br />
+                  Lagoa do Toco
+                  <br />
+                  Russas/CE
+                  <br />
+                  CEP: 62.905-090
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div className="bg-[#1b1b1b] rounded-[30px] p-8 border border-[#d8bc87]/20 flex flex-col justify-between">
+            <div>
+              <h3 className="text-3xl font-bold mb-5">
+                Atendimento rápido
+              </h3>
+
+              <p className="text-gray-300 leading-relaxed mb-6">
+                Clique abaixo e fale diretamente conosco pelo WhatsApp.
+              </p>
+
+              <a
+                href={`https://wa.me/${whatsappNumber}`}
+                target="_blank"
+                className="inline-flex bg-[#b8892d] px-7 py-3 rounded-xl font-semibold hover:scale-105 transition"
+              >
+                Chamar no WhatsApp
+              </a>
+            </div>
+
+            <div className="mt-10 rounded-2xl overflow-hidden border border-[#d8bc87]/20">
+              <iframe
+                src="https://maps.google.com/maps?q=Zycont%20Contabilidade%20Inteligente%20Russas%20CE&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                width="100%"
+                height="260"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+              ></iframe>
+            </div>
+          </div>
         </div>
-      </main>
-    </div>
+      </section>
+
+      <footer className="bg-black text-gray-300 pt-20 pb-8">
+        <div className="max-w-7xl mx-auto px-8">
+          <div className="grid md:grid-cols-4 gap-12 pb-14 border-b border-white/10">
+            <div className="md:col-span-2">
+              <img src="/logo.png" alt="Zycont" className="w-[320px] mb-8" />
+
+              <p className="text-gray-400 text-lg leading-relaxed max-w-xl">
+                Contabilidade inteligente, moderna e estratégica para empresas que desejam crescer com segurança, organização e suporte profissional.
+              </p>
+            </div>
+
+            <div>
+              <h3 className="text-[#d8bc87] font-bold text-xl mb-6">
+                Navegação
+              </h3>
+
+              <div className="space-y-4 text-gray-400">
+                <p><a href="#inicio" className="hover:text-[#d8bc87] transition">Início</a></p>
+                <p><a href="#servicos" className="hover:text-[#d8bc87] transition">Serviços</a></p>
+                <p><a href="#sobre" className="hover:text-[#d8bc87] transition">Sobre</a></p>
+                <p><a href="#contato" className="hover:text-[#d8bc87] transition">Contato</a></p>
+              </div>
+            </div>
+
+            <div>
+              <h3 className="text-[#d8bc87] font-bold text-xl mb-6">
+                Contato
+              </h3>
+
+              <div className="space-y-4 text-gray-400">
+                <p>WhatsApp: (88) 99493-9014</p>
+                <p>Instagram: @zycont_contabilidade</p>
+                <p>E-mail: contato.zycont@gmail.com</p>
+                <p>Russas/CE</p>
+              </div>
+            </div>
+          </div>
+
+          <div className="pt-8 flex flex-col md:flex-row justify-between gap-4 text-gray-500">
+            <p>© 2026 Zycont Contabilidade Inteligente — Todos os direitos reservados.</p>
+            <p>Desenvolvido para uma contabilidade mais inteligente.</p>
+          </div>
+        </div>
+      </footer>
+
+      <a
+        href={`https://wa.me/${whatsappNumber}`}
+        target="_blank"
+        className="fixed bottom-6 right-6 bg-[#25D366] w-16 h-16 rounded-full flex items-center justify-center text-white text-3xl shadow-2xl hover:scale-110 transition z-50"
+      >
+        ✆
+      </a>
+    </main>
   );
 }
