@@ -124,59 +124,60 @@ function BrazilCoverageMap() {
         </div>
 
         <svg
-          viewBox="0 0 420 420"
-          className="mx-auto h-[360px] w-full max-w-[420px]"
+          viewBox="0 0 460 420"
+          className="mx-auto h-[360px] w-full max-w-[460px]"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
-          aria-label="Mapa estilizado do Brasil com atendimento online"
+          aria-label="Mapa do Brasil com destaque para Russas no Ceará"
         >
           <path
-            d="M239 42 283 56 296 88 333 93 347 125 331 152 346 178 329 209 337 243 311 263 302 301 273 318 258 361 219 379 186 350 153 344 139 309 102 293 96 257 63 232 78 194 69 158 98 136 111 96 153 90 174 58 210 70 239 42Z"
+            d="M173 45 218 38 246 55 286 50 309 73 352 74 393 100 420 132 405 162 369 171 348 198 357 229 335 258 319 296 286 313 268 354 232 384 196 366 178 329 143 316 118 284 82 269 73 230 92 199 72 167 95 132 128 121 137 84 173 45Z"
             className="fill-[#1a1a1a] stroke-[#d8bc87]"
             strokeWidth="3"
           />
           <path
-            d="M148 124c42 30 72 63 91 101 19 39 30 82 34 129"
+            d="M154 88c54 34 94 76 120 126 22 43 33 90 33 140"
             className="stroke-[#d8bc87]/35"
             strokeWidth="2"
             strokeLinecap="round"
           />
           <path
-            d="M101 221c59-14 118-12 178 7"
+            d="M91 205c76-13 147-4 213 25"
             className="stroke-[#d8bc87]/25"
             strokeWidth="2"
             strokeLinecap="round"
           />
           <path
-            d="M252 86h92c7 0 12 5 12 12v24c0 7-5 12-12 12h-92c-7 0-12-5-12-12V98c0-7 5-12 12-12Z"
+            d="M292 66h96c7 0 12 5 12 12v24c0 7-5 12-12 12h-96c-7 0-12-5-12-12V78c0-7 5-12 12-12Z"
             className="fill-black/60 stroke-[#d8bc87]/35"
             strokeWidth="2"
           />
-          <text x="261" y="116" className="fill-[#f4e3c2] text-[17px] font-bold">
+          <text x="301" y="96" className="fill-[#f4e3c2] text-[17px] font-bold">
             Russas/CE
           </text>
           <path
-            d="M316 135 329 149"
+            d="M323 116 343 137"
             className="stroke-[#d8bc87]"
             strokeWidth="2"
             strokeLinecap="round"
           />
           <path
-            d="M329 124c-9 0-16 7-16 16 0 12 16 29 16 29s16-17 16-29c0-9-7-16-16-16Z"
+            d="M343 112c-9 0-16 7-16 16 0 12 16 29 16 29s16-17 16-29c0-9-7-16-16-16Z"
             className="fill-[#b8892d] stroke-[#f4e3c2]"
             strokeWidth="2"
           />
-          <circle cx="329" cy="140" r="5" className="fill-white" />
-          <circle cx="329" cy="140" r="24" className="stroke-[#d8bc87]/35" strokeWidth="2" />
+          <circle cx="343" cy="128" r="5" className="fill-white" />
+          <circle cx="343" cy="128" r="24" className="stroke-[#d8bc87]/35" strokeWidth="2" />
           <path
-            d="M329 149c-42 12-86 36-129 71-43 36-74 72-91 109"
+            d="M343 148c-52 15-104 45-154 90-37 34-64 69-81 105"
             className="stroke-[#d8bc87]/40"
             strokeWidth="2"
             strokeDasharray="6 9"
             strokeLinecap="round"
           />
-          <circle cx="109" cy="309" r="6" className="fill-[#f4e3c2]" />
-          <circle cx="191" cy="200" r="6" className="fill-[#f4e3c2]" />
+          <circle cx="108" cy="343" r="6" className="fill-[#f4e3c2]" />
+          <circle cx="189" cy="238" r="6" className="fill-[#f4e3c2]" />
+          <circle cx="307" cy="354" r="6" className="fill-[#f4e3c2]" />
         </svg>
 
         <div className="grid sm:grid-cols-2 gap-4">
