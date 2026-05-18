@@ -410,6 +410,18 @@ export default function Home() {
             alt="Sobre Bruno Oliveira"
             className="relative rounded-[35px] shadow-2xl"
           />
+
+          <div className="absolute left-6 right-6 bottom-6 rounded-2xl border border-[#d8bc87]/40 bg-[#111]/90 px-6 py-5 text-white shadow-2xl backdrop-blur-md">
+            <p className="text-[#d8bc87] text-sm font-semibold tracking-[0.22em] mb-2">
+              CONTADOR RESPONSÁVEL
+            </p>
+            <h3 className="text-2xl font-bold leading-tight">
+              Bruno Oliveira
+            </h3>
+            <p className="mt-1 text-[#f4e3c2] font-semibold">
+              CRC-CE 029358/O-0
+            </p>
+          </div>
         </div>
 
         <div>
@@ -562,9 +574,18 @@ export default function Home() {
       <a
         href={`https://wa.me/${whatsappNumber}`}
         target="_blank"
-        className="fixed bottom-6 right-6 bg-[#25D366] w-16 h-16 rounded-full flex items-center justify-center text-white text-3xl shadow-2xl hover:scale-110 transition z-50"
+        aria-label="Chamar a Zycont no WhatsApp"
+        className="fixed bottom-6 right-6 bg-[#25D366] w-16 h-16 rounded-full flex items-center justify-center text-white shadow-2xl hover:scale-110 transition z-50"
       >
-        ✆
+        <svg
+          className="h-8 w-8"
+          viewBox="0 0 32 32"
+          fill="currentColor"
+          xmlns="http://www.w3.org/2000/svg"
+          aria-hidden="true"
+        >
+          <path d="M16.04 4C9.42 4 4.04 9.32 4.04 15.86c0 2.1.56 4.15 1.62 5.95L4 28l6.36-1.62a12.15 12.15 0 0 0 5.68 1.43C22.66 27.81 28 22.49 28 15.95S22.66 4 16.04 4Zm0 21.78c-1.82 0-3.6-.49-5.15-1.41l-.37-.22-3.77.96 1.01-3.63-.25-.38a9.84 9.84 0 0 1-1.5-5.24c0-5.43 4.5-9.85 10.03-9.85 5.52 0 10.01 4.46 10.01 9.94 0 5.43-4.49 9.83-10.01 9.83Zm5.5-7.36c-.3-.15-1.77-.86-2.04-.96-.27-.1-.47-.15-.67.15-.2.29-.77.96-.95 1.15-.17.19-.35.22-.65.07-.3-.15-1.27-.46-2.42-1.47-.89-.79-1.5-1.76-1.67-2.06-.18-.29-.02-.45.13-.6.14-.13.3-.34.45-.51.15-.17.2-.29.3-.49.1-.2.05-.37-.02-.52-.07-.15-.67-1.59-.92-2.18-.24-.57-.49-.49-.67-.5h-.57c-.2 0-.52.07-.8.37-.27.29-1.05 1.01-1.05 2.47s1.07 2.87 1.22 3.06c.15.2 2.1 3.17 5.09 4.45.71.3 1.26.48 1.69.62.71.22 1.36.19 1.88.12.57-.08 1.77-.71 2.02-1.4.25-.69.25-1.28.17-1.4-.07-.13-.27-.2-.57-.35Z" />
+        </svg>
       </a>
     </main>
   );
