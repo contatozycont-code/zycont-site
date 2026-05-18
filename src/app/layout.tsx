@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Zycont Contabilidade Inteligente",
-  description: "Contabilidade estratégica para empresas",
+  title: "Zycont Contabilidade Inteligente | Contador em Russas CE",
+  description: "Contabilidade em Russas CE, atendimento online no Ceará e em todo o Brasil para MEI, ME, EPP, abertura de empresa e regularização de CNPJ.",
 
   verification: {
     google: "FcO5nnT3l2czm6f7CrRFk-a998AntJinMq-ZuBENs94",
@@ -28,7 +28,7 @@ export default function RootLayout({
 }>) {
   return (
     <html
-      lang="en"
+      lang="pt-BR"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">{children}</body>

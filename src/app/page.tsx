@@ -1,5 +1,4 @@
 import type { ReactElement, SVGProps } from "react";
-import ContactLeadForm from "./ContactLeadForm";
 
 type ServiceIconName =
   | "company"
@@ -139,6 +138,27 @@ export default function Home() {
     { text: "Excelente suporte. Sempre explicam tudo com clareza e ajudam nas decisões da empresa.", author: "Cliente empresarial" },
   ];
 
+  const intencoes = [
+    "Quero abrir minha empresa",
+    "Quero trocar de contador",
+    "Preciso regularizar meu CNPJ",
+  ];
+
+  const segmentos = [
+    "MEI",
+    "Microempresas",
+    "Empresas de Pequeno Porte",
+    "Prestadores de serviço",
+    "Comércio",
+    "Profissionais autônomos",
+  ];
+
+  const confianca = [
+    "Contador registrado no CRC-CE",
+    "Atendimento online em todo o Brasil",
+    "Especialistas em MEI, ME e EPP",
+  ];
+
   function whatsappLink(servico: string) {
     const message = `Olá! Vim pelo site da Zycont e tenho interesse no serviço de ${servico}. Gostaria de mais informações.`;
     return `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
@@ -166,10 +186,11 @@ export default function Home() {
       <header className="max-w-7xl mx-auto px-8 py-8 flex items-center justify-between fade-up">
         <img src="/logo.png" alt="Zycont" className="w-[420px]" />
 
-        <nav className="hidden md:flex gap-12 text-lg font-medium">
+        <nav className="hidden md:flex gap-8 text-lg font-medium">
           <a href="#inicio" className="text-[#b8892d]">Início</a>
           <a href="#servicos">Serviços</a>
           <a href="#sobre">Sobre</a>
+          <a href="#trabalhe-conosco">Trabalhe conosco</a>
           <a href="#contato">Fale conosco</a>
         </nav>
 
@@ -213,6 +234,19 @@ export default function Home() {
             >
               Conhecer serviços →
             </a>
+          </div>
+
+          <div className="mt-8 flex flex-wrap gap-3">
+            {intencoes.map((item) => (
+              <a
+                key={item}
+                href={whatsappLink(item)}
+                target="_blank"
+                className="rounded-full border border-[#d8bc87] bg-white/55 px-5 py-3 text-sm font-semibold text-[#6d5221] shadow-sm transition hover:border-[#b8892d] hover:bg-white"
+              >
+                {item}
+              </a>
+            ))}
           </div>
         </div>
 
@@ -280,6 +314,48 @@ export default function Home() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      <section className="py-20 bg-white/60">
+        <div className="max-w-7xl mx-auto px-8">
+          <div className="grid lg:grid-cols-[0.9fr_1.1fr] gap-12 items-start">
+            <div>
+              <p className="text-[#b8892d] tracking-[0.3em] font-semibold mb-4">
+                PARA QUEM ATENDEMOS
+              </p>
+              <h2 className="text-5xl font-bold leading-tight mb-6">
+                Soluções para empresas de diferentes portes
+              </h2>
+              <p className="text-[#5f574d] text-xl leading-relaxed">
+                A Zycont atende empresas em Russas/CE, no Ceará e em todo o Brasil com suporte contábil online, seguro e próximo.
+              </p>
+            </div>
+
+            <div className="grid sm:grid-cols-2 gap-4">
+              {segmentos.map((item) => (
+                <div
+                  key={item}
+                  className="rounded-2xl border border-[#eadfce] bg-white px-6 py-5 font-semibold text-[#3b342d] shadow-sm"
+                >
+                  {item}
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-[#111] py-12 text-white">
+        <div className="max-w-7xl mx-auto px-8 grid md:grid-cols-3 gap-6">
+          {confianca.map((item) => (
+            <div
+              key={item}
+              className="rounded-2xl border border-[#d8bc87]/20 bg-[#1a1a1a] px-6 py-5 text-center font-semibold text-[#f4e3c2]"
+            >
+              {item}
+            </div>
+          ))}
         </div>
       </section>
 
@@ -380,10 +456,12 @@ export default function Home() {
           <div className="space-y-6">
             {[
               ["Quanto custa abrir uma empresa?", "O valor pode variar conforme o tipo de empresa, atividade e regime tributário. Entre em contato para receber uma análise personalizada."],
+              ["Posso trocar de contador a qualquer momento?", "Sim. A Zycont orienta a transição para que sua empresa mude de contabilidade com organização e segurança."],
+              ["A Zycont ajuda a escolher o melhor regime tributário?", "Sim. Fazemos análise do perfil da empresa para orientar o regime mais adequado e reduzir riscos fiscais."],
+              ["Vocês cuidam da parte fiscal e trabalhista?", "Sim. Atuamos com contabilidade mensal, obrigações fiscais, departamento pessoal e acompanhamento das rotinas da empresa."],
               ["Vocês atendem online?", "Sim. Atendemos clientes de forma online com praticidade, segurança e suporte completo em todo o Brasil."],
               ["A Zycont atende MEI, ME e EPP?", "Sim. Atuamos com soluções contábeis completas para MEI, Microempresas e Empresas de Pequeno Porte."],
-              ["Vocês fazem imposto de renda?", "Sim. Realizamos declaração de imposto de renda para pessoa física e jurídica com segurança e acompanhamento profissional."],
-              ["Quanto tempo demora para abrir uma empresa?", "O prazo depende da atividade e dos órgãos responsáveis, mas buscamos sempre realizar todo o processo da forma mais rápida possível."],
+              ["Vocês atendem empresas em Russas/CE?", "Sim. Atendemos em Russas, no Ceará e também de forma online para empresas de outras regiões do Brasil."],
             ].map(([q, a]) => (
               <div
                 key={q}
@@ -467,7 +545,15 @@ export default function Home() {
                 <h3 className="text-[#d8bc87] font-semibold mb-2">
                   Instagram
                 </h3>
-                <p>@zycont_contabilidade</p>
+                <p>
+                  <a
+                    href="https://www.instagram.com/zycont_contabilidade"
+                    target="_blank"
+                    className="hover:text-[#d8bc87] transition"
+                  >
+                    @zycont_contabilidade
+                  </a>
+                </p>
               </div>
 
               <div>
@@ -498,21 +584,33 @@ export default function Home() {
             <div className="space-y-8">
               <div>
                 <h3 className="text-3xl font-bold mb-5">
-                  Envie seus dados
+                  Escolha seu atendimento
                 </h3>
 
-                <p className="text-gray-300 leading-relaxed mb-6">
-                  Preencha as informações abaixo e fale com a Zycont pelo WhatsApp.
-                </p>
-
-                <ContactLeadForm whatsappNumber={whatsappNumber} />
+                <div className="grid sm:grid-cols-2 gap-3">
+                  {[
+                    "Abrir empresa",
+                    "Trocar de contador",
+                    "Regularizar CNPJ",
+                    "Falar com especialista",
+                  ].map((item) => (
+                    <a
+                      key={item}
+                      href={whatsappLink(item)}
+                      target="_blank"
+                      className="rounded-xl border border-[#d8bc87]/25 bg-black/20 px-4 py-3 text-center font-semibold text-[#f4e3c2] transition hover:border-[#d8bc87]/60 hover:bg-[#d8bc87]/10"
+                    >
+                      {item}
+                    </a>
+                  ))}
+                </div>
               </div>
 
-              <div className="rounded-2xl border border-[#d8bc87]/20 bg-black/20 p-6">
+              <div id="trabalhe-conosco" className="rounded-2xl border border-[#d8bc87]/15 bg-black/10 p-5 scroll-mt-28">
                 <p className="text-[#d8bc87] font-semibold tracking-[0.18em] text-sm mb-3">
                   TRABALHE CONOSCO
                 </p>
-                <h3 className="text-2xl font-bold mb-3">
+                <h3 className="text-xl font-bold mb-3">
                   Envie seu currículo
                 </h3>
                 <p className="text-gray-300 leading-relaxed mb-5">
@@ -520,7 +618,7 @@ export default function Home() {
                 </p>
                 <a
                   href="mailto:contato.zycont@gmail.com?subject=Curr%C3%ADculo%20-%20Trabalhe%20Conosco%20Zycont&body=Ol%C3%A1%2C%20equipe%20Zycont.%0A%0ASegue%20meu%20curr%C3%ADculo%20para%20an%C3%A1lise.%0A%0ANome%3A%0ATelefone%3A%0ACidade%2FUF%3A"
-                  className="inline-flex rounded-xl border border-[#d8bc87]/50 px-6 py-3 font-semibold text-[#f4e3c2] transition hover:bg-[#d8bc87]/10"
+                  className="inline-flex rounded-xl border border-[#d8bc87]/40 px-5 py-3 font-semibold text-[#f4e3c2] transition hover:bg-[#d8bc87]/10"
                 >
                   Enviar currículo
                 </a>
@@ -579,6 +677,7 @@ export default function Home() {
                 <p><a href="#inicio" className="hover:text-[#d8bc87] transition">Início</a></p>
                 <p><a href="#servicos" className="hover:text-[#d8bc87] transition">Serviços</a></p>
                 <p><a href="#sobre" className="hover:text-[#d8bc87] transition">Sobre</a></p>
+                <p><a href="#trabalhe-conosco" className="hover:text-[#d8bc87] transition">Trabalhe conosco</a></p>
                 <p><a href="#contato" className="hover:text-[#d8bc87] transition">Fale conosco</a></p>
               </div>
             </div>
@@ -590,7 +689,16 @@ export default function Home() {
 
               <div className="space-y-4 text-gray-400">
                 <p>WhatsApp: (88) 99493-9014</p>
-                <p>Instagram: @zycont_contabilidade</p>
+                <p>
+                  Instagram:{" "}
+                  <a
+                    href="https://www.instagram.com/zycont_contabilidade"
+                    target="_blank"
+                    className="hover:text-[#d8bc87] transition"
+                  >
+                    @zycont_contabilidade
+                  </a>
+                </p>
                 <p>E-mail: contato.zycont@gmail.com</p>
                 <p>Russas/CE</p>
               </div>
