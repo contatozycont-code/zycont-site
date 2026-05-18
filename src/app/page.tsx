@@ -147,10 +147,29 @@ function BrazilCoverageMap() {
             strokeWidth="2"
             strokeLinecap="round"
           />
-          <circle cx="294" cy="128" r="10" className="fill-[#b8892d]" />
-          <circle cx="294" cy="128" r="18" className="stroke-[#d8bc87]/55" strokeWidth="2" />
           <path
-            d="M294 128c-33 14-67 38-103 72-36 35-63 71-82 109"
+            d="M252 86h92c7 0 12 5 12 12v24c0 7-5 12-12 12h-92c-7 0-12-5-12-12V98c0-7 5-12 12-12Z"
+            className="fill-black/60 stroke-[#d8bc87]/35"
+            strokeWidth="2"
+          />
+          <text x="261" y="116" className="fill-[#f4e3c2] text-[17px] font-bold">
+            Russas/CE
+          </text>
+          <path
+            d="M316 135 329 149"
+            className="stroke-[#d8bc87]"
+            strokeWidth="2"
+            strokeLinecap="round"
+          />
+          <path
+            d="M329 124c-9 0-16 7-16 16 0 12 16 29 16 29s16-17 16-29c0-9-7-16-16-16Z"
+            className="fill-[#b8892d] stroke-[#f4e3c2]"
+            strokeWidth="2"
+          />
+          <circle cx="329" cy="140" r="5" className="fill-white" />
+          <circle cx="329" cy="140" r="24" className="stroke-[#d8bc87]/35" strokeWidth="2" />
+          <path
+            d="M329 149c-42 12-86 36-129 71-43 36-74 72-91 109"
             className="stroke-[#d8bc87]/40"
             strokeWidth="2"
             strokeDasharray="6 9"
@@ -158,9 +177,6 @@ function BrazilCoverageMap() {
           />
           <circle cx="109" cy="309" r="6" className="fill-[#f4e3c2]" />
           <circle cx="191" cy="200" r="6" className="fill-[#f4e3c2]" />
-          <text x="306" y="132" className="fill-[#f4e3c2] text-[15px] font-bold">
-            CE
-          </text>
         </svg>
 
         <div className="grid sm:grid-cols-2 gap-4">
