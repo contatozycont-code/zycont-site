@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   description: "Contabilidade estratégica para empresas",
 
   verification: {
-    google: "FcO5nnT3l2czm",
+    google: "FcO5nnT3l2czm6f7CrRFk-a998AntJinMq-ZuBENs94",
   },
 };
 
