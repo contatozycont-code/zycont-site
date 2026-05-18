@@ -133,9 +133,10 @@ export default function Home() {
   ];
 
   const depoimentos = [
-    { text: "Atendimento rápido, profissional e muito claro. A Zycont trouxe mais segurança para minha empresa.", author: "Cliente Zycont" },
-    { text: "Minha empresa ficou muito mais organizada depois do acompanhamento contábil da Zycont.", author: "Empresário atendido" },
-    { text: "Excelente suporte. Sempre explicam tudo com clareza e ajudam nas decisões da empresa.", author: "Cliente empresarial" },
+    { text: "Atendimento claro e muito profissional.", author: "Cliente empresarial" },
+    { text: "Minha empresa ficou mais organizada.", author: "Empresário atendido" },
+    { text: "Suporte rápido e orientação segura.", author: "Cliente Zycont" },
+    { text: "Contabilidade próxima e estratégica.", author: "Empresa atendida" },
   ];
 
   const intencoes = [
@@ -416,63 +417,24 @@ export default function Home() {
             </h2>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-7">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
             {depoimentos.map((item) => (
               <div
                 key={item.author}
-                className="bg-white rounded-[28px] p-8 border border-[#eadfce] shadow-sm hover:shadow-xl hover:-translate-y-2 transition duration-300"
+                className="bg-white rounded-2xl p-6 border border-[#eadfce] shadow-sm hover:shadow-xl hover:-translate-y-1 transition duration-300"
               >
-                <div className="text-[#b8892d] text-4xl mb-6">
+                <div className="text-[#b8892d] text-xl mb-5 tracking-[0.12em]">
                   ★★★★★
                 </div>
 
-                <p className="text-[#4b443d] text-xl leading-relaxed mb-8 italic">
+                <p className="text-[#3b342d] text-lg leading-relaxed mb-6 font-medium">
                   “{item.text}”
                 </p>
 
-                <div className="w-12 h-1 bg-[#b8892d] mb-4" />
+                <div className="w-10 h-1 bg-[#b8892d] mb-4" />
 
-                <p className="font-bold text-[#111]">
+                <p className="text-sm font-bold uppercase tracking-[0.18em] text-[#6d5221]">
                   {item.author}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="py-24 bg-[#111] text-white">
-        <div className="max-w-5xl mx-auto px-8">
-          <div className="text-center mb-16">
-            <p className="text-[#d8bc87] tracking-[0.3em] font-semibold mb-4">
-              FAQ
-            </p>
-
-            <h2 className="text-5xl font-bold">
-              Perguntas frequentes
-            </h2>
-          </div>
-
-          <div className="space-y-6">
-            {[
-              ["Quanto custa abrir uma empresa?", "O valor pode variar conforme o tipo de empresa, atividade e regime tributário. Entre em contato para receber uma análise personalizada."],
-              ["Posso trocar de contador a qualquer momento?", "Sim. A Zycont orienta a transição para que sua empresa mude de contabilidade com organização e segurança."],
-              ["A Zycont ajuda a escolher o melhor regime tributário?", "Sim. Fazemos análise do perfil da empresa para orientar o regime mais adequado e reduzir riscos fiscais."],
-              ["Vocês cuidam da parte fiscal e trabalhista?", "Sim. Atuamos com contabilidade mensal, obrigações fiscais, departamento pessoal e acompanhamento das rotinas da empresa."],
-              ["Vocês atendem online?", "Sim. Atendemos clientes de forma online com praticidade, segurança e suporte completo em todo o Brasil."],
-              ["A Zycont atende MEI, ME e EPP?", "Sim. Atuamos com soluções contábeis completas para MEI, Microempresas e Empresas de Pequeno Porte."],
-              ["Vocês atendem empresas em Russas/CE?", "Sim. Atendemos em Russas, no Ceará e também de forma online para empresas de outras regiões do Brasil."],
-            ].map(([q, a]) => (
-              <div
-                key={q}
-                className="bg-[#1a1a1a] border border-[#d8bc87]/20 rounded-[24px] p-8 hover:border-[#d8bc87]/50 transition"
-              >
-                <h3 className="text-2xl font-bold mb-4">
-                  {q}
-                </h3>
-
-                <p className="text-gray-300 leading-relaxed text-lg">
-                  {a}
                 </p>
               </div>
             ))}
@@ -522,7 +484,46 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="contato" className="bg-[#111] text-white py-24">
+      <section className="py-24 bg-[#111] text-white">
+        <div className="max-w-5xl mx-auto px-8">
+          <div className="text-center mb-16">
+            <p className="text-[#d8bc87] tracking-[0.3em] font-semibold mb-4">
+              FAQ
+            </p>
+
+            <h2 className="text-5xl font-bold">
+              Perguntas frequentes
+            </h2>
+          </div>
+
+          <div className="space-y-6">
+            {[
+              ["Quanto custa abrir uma empresa?", "O valor pode variar conforme o tipo de empresa, atividade e regime tributário. Entre em contato para receber uma análise personalizada."],
+              ["Posso trocar de contador a qualquer momento?", "Sim. A Zycont orienta a transição para que sua empresa mude de contabilidade com organização e segurança."],
+              ["A Zycont ajuda a escolher o melhor regime tributário?", "Sim. Fazemos análise do perfil da empresa para orientar o regime mais adequado e reduzir riscos fiscais."],
+              ["Vocês cuidam da parte fiscal e trabalhista?", "Sim. Atuamos com contabilidade mensal, obrigações fiscais, departamento pessoal e acompanhamento das rotinas da empresa."],
+              ["Vocês atendem online?", "Sim. Atendemos clientes de forma online com praticidade, segurança e suporte completo em todo o Brasil."],
+              ["A Zycont atende MEI, ME e EPP?", "Sim. Atuamos com soluções contábeis completas para MEI, Microempresas e Empresas de Pequeno Porte."],
+              ["Vocês atendem empresas em Russas/CE?", "Sim. Atendemos em Russas, no Ceará e também de forma online para empresas de outras regiões do Brasil."],
+            ].map(([q, a]) => (
+              <div
+                key={q}
+                className="bg-[#1a1a1a] border border-[#d8bc87]/20 rounded-[24px] p-8 hover:border-[#d8bc87]/50 transition"
+              >
+                <h3 className="text-2xl font-bold mb-4">
+                  {q}
+                </h3>
+
+                <p className="text-gray-300 leading-relaxed text-lg">
+                  {a}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="contato" className="bg-black text-white py-24 border-t border-[#d8bc87]/10">
         <div className="max-w-7xl mx-auto px-8 grid md:grid-cols-2 gap-16">
           <div>
             <p className="text-[#d8bc87] tracking-[0.3em] font-semibold mb-4">
