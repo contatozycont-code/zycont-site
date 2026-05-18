@@ -1,4 +1,5 @@
 import type { ReactElement, SVGProps } from "react";
+import ContactLeadForm from "./ContactLeadForm";
 
 type ServiceIconName =
   | "company"
@@ -169,7 +170,7 @@ export default function Home() {
           <a href="#inicio" className="text-[#b8892d]">Início</a>
           <a href="#servicos">Serviços</a>
           <a href="#sobre">Sobre</a>
-          <a href="#contato">Contato</a>
+          <a href="#contato">Fale conosco</a>
         </nav>
 
         <a
@@ -447,7 +448,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-8 grid md:grid-cols-2 gap-16">
           <div>
             <p className="text-[#d8bc87] tracking-[0.3em] font-semibold mb-4">
-              CONTATO
+              FALE CONOSCO
             </p>
 
             <h2 className="text-5xl font-bold mb-10">
@@ -494,22 +495,54 @@ export default function Home() {
           </div>
 
           <div className="bg-[#1b1b1b] rounded-[30px] p-8 border border-[#d8bc87]/20 flex flex-col justify-between">
-            <div>
-              <h3 className="text-3xl font-bold mb-5">
-                Atendimento rápido
-              </h3>
+            <div className="space-y-8">
+              <div>
+                <h3 className="text-3xl font-bold mb-5">
+                  Envie seus dados
+                </h3>
 
-              <p className="text-gray-300 leading-relaxed mb-6">
-                Clique abaixo e fale diretamente conosco pelo WhatsApp.
-              </p>
+                <p className="text-gray-300 leading-relaxed mb-6">
+                  Preencha as informações abaixo e fale com a Zycont pelo WhatsApp.
+                </p>
 
-              <a
-                href={`https://wa.me/${whatsappNumber}`}
-                target="_blank"
-                className="inline-flex bg-[#b8892d] px-7 py-3 rounded-xl font-semibold hover:scale-105 transition"
-              >
-                Chamar no WhatsApp
-              </a>
+                <ContactLeadForm whatsappNumber={whatsappNumber} />
+              </div>
+
+              <div className="rounded-2xl border border-[#d8bc87]/20 bg-black/20 p-6">
+                <p className="text-[#d8bc87] font-semibold tracking-[0.18em] text-sm mb-3">
+                  TRABALHE CONOSCO
+                </p>
+                <h3 className="text-2xl font-bold mb-3">
+                  Envie seu currículo
+                </h3>
+                <p className="text-gray-300 leading-relaxed mb-5">
+                  Quer fazer parte da equipe Zycont? Envie seu currículo por e-mail para análise.
+                </p>
+                <a
+                  href="mailto:contato.zycont@gmail.com?subject=Curr%C3%ADculo%20-%20Trabalhe%20Conosco%20Zycont&body=Ol%C3%A1%2C%20equipe%20Zycont.%0A%0ASegue%20meu%20curr%C3%ADculo%20para%20an%C3%A1lise.%0A%0ANome%3A%0ATelefone%3A%0ACidade%2FUF%3A"
+                  className="inline-flex rounded-xl border border-[#d8bc87]/50 px-6 py-3 font-semibold text-[#f4e3c2] transition hover:bg-[#d8bc87]/10"
+                >
+                  Enviar currículo
+                </a>
+              </div>
+
+              <div>
+                <h3 className="text-3xl font-bold mb-5">
+                  Atendimento rápido
+                </h3>
+
+                <p className="text-gray-300 leading-relaxed mb-6">
+                  Clique abaixo e fale diretamente conosco pelo WhatsApp.
+                </p>
+
+                <a
+                  href={`https://wa.me/${whatsappNumber}`}
+                  target="_blank"
+                  className="inline-flex bg-[#b8892d] px-7 py-3 rounded-xl font-semibold hover:scale-105 transition"
+                >
+                  Chamar no WhatsApp
+                </a>
+              </div>
             </div>
 
             <div className="mt-10 rounded-2xl overflow-hidden border border-[#d8bc87]/20">
@@ -546,13 +579,13 @@ export default function Home() {
                 <p><a href="#inicio" className="hover:text-[#d8bc87] transition">Início</a></p>
                 <p><a href="#servicos" className="hover:text-[#d8bc87] transition">Serviços</a></p>
                 <p><a href="#sobre" className="hover:text-[#d8bc87] transition">Sobre</a></p>
-                <p><a href="#contato" className="hover:text-[#d8bc87] transition">Contato</a></p>
+                <p><a href="#contato" className="hover:text-[#d8bc87] transition">Fale conosco</a></p>
               </div>
             </div>
 
             <div>
               <h3 className="text-[#d8bc87] font-bold text-xl mb-6">
-                Contato
+                Fale conosco
               </h3>
 
               <div className="space-y-4 text-gray-400">
