@@ -104,6 +104,88 @@ function ServiceIcon({ name }: { name: ServiceIconName }) {
   );
 }
 
+function BrazilCoverageMap() {
+  return (
+    <div className="relative overflow-hidden rounded-[30px] border border-[#d8bc87]/20 bg-[#111] p-8 shadow-2xl">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_75%_20%,rgba(216,188,135,0.18),transparent_32%)]" />
+      <div className="relative">
+        <div className="mb-8 flex items-start justify-between gap-6">
+          <div>
+            <p className="text-[#d8bc87] text-sm font-semibold tracking-[0.22em] mb-3">
+              ATENDIMENTO ONLINE
+            </p>
+            <h3 className="text-3xl font-bold text-white">
+              Brasil inteiro
+            </h3>
+          </div>
+          <div className="rounded-full border border-[#d8bc87]/30 px-4 py-2 text-sm font-semibold text-[#f4e3c2]">
+            Base em Russas/CE
+          </div>
+        </div>
+
+        <svg
+          viewBox="0 0 420 420"
+          className="mx-auto h-[360px] w-full max-w-[420px]"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          aria-label="Mapa estilizado do Brasil com atendimento online"
+        >
+          <path
+            d="M239 42 283 56 296 88 333 93 347 125 331 152 346 178 329 209 337 243 311 263 302 301 273 318 258 361 219 379 186 350 153 344 139 309 102 293 96 257 63 232 78 194 69 158 98 136 111 96 153 90 174 58 210 70 239 42Z"
+            className="fill-[#1a1a1a] stroke-[#d8bc87]"
+            strokeWidth="3"
+          />
+          <path
+            d="M148 124c42 30 72 63 91 101 19 39 30 82 34 129"
+            className="stroke-[#d8bc87]/35"
+            strokeWidth="2"
+            strokeLinecap="round"
+          />
+          <path
+            d="M101 221c59-14 118-12 178 7"
+            className="stroke-[#d8bc87]/25"
+            strokeWidth="2"
+            strokeLinecap="round"
+          />
+          <circle cx="294" cy="128" r="10" className="fill-[#b8892d]" />
+          <circle cx="294" cy="128" r="18" className="stroke-[#d8bc87]/55" strokeWidth="2" />
+          <path
+            d="M294 128c-33 14-67 38-103 72-36 35-63 71-82 109"
+            className="stroke-[#d8bc87]/40"
+            strokeWidth="2"
+            strokeDasharray="6 9"
+            strokeLinecap="round"
+          />
+          <circle cx="109" cy="309" r="6" className="fill-[#f4e3c2]" />
+          <circle cx="191" cy="200" r="6" className="fill-[#f4e3c2]" />
+          <text x="306" y="132" className="fill-[#f4e3c2] text-[15px] font-bold">
+            CE
+          </text>
+        </svg>
+
+        <div className="grid sm:grid-cols-2 gap-4">
+          <div className="rounded-2xl border border-[#d8bc87]/20 bg-black/20 p-5">
+            <p className="text-[#d8bc87] font-semibold mb-2">
+              Base Zycont
+            </p>
+            <p className="text-gray-300">
+              Russas/CE
+            </p>
+          </div>
+          <div className="rounded-2xl border border-[#d8bc87]/20 bg-black/20 p-5">
+            <p className="text-[#d8bc87] font-semibold mb-2">
+              Atendimento
+            </p>
+            <p className="text-gray-300">
+              Online em todo o Brasil
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export default function Home() {
   const whatsappNumber = "5588994939014";
 
@@ -524,137 +606,66 @@ export default function Home() {
       </section>
 
       <section id="contato" className="bg-black text-white py-24 border-t border-[#d8bc87]/10">
-        <div className="max-w-7xl mx-auto px-8 grid md:grid-cols-2 gap-16">
+        <div className="max-w-7xl mx-auto px-8 grid lg:grid-cols-[0.9fr_1.1fr] gap-16 items-center">
           <div>
             <p className="text-[#d8bc87] tracking-[0.3em] font-semibold mb-4">
               FALE CONOSCO
             </p>
 
-            <h2 className="text-5xl font-bold mb-10">
-              Vamos conversar sobre sua empresa
+            <h2 className="text-5xl font-bold leading-tight mb-8">
+              Atendimento contábil online para empresas em todo o Brasil
             </h2>
 
-            <div className="space-y-8 text-lg">
-              <div>
-                <h3 className="text-[#d8bc87] font-semibold mb-2">
-                  WhatsApp
-                </h3>
-                <p>(88) 99493-9014</p>
-              </div>
+            <p className="text-gray-300 text-xl leading-relaxed mb-8">
+              Nossa base fica em Russas/CE, mas a Zycont acompanha clientes de forma digital, com suporte próximo, seguro e organizado para empresas em diferentes regiões.
+            </p>
 
-              <div>
-                <h3 className="text-[#d8bc87] font-semibold mb-2">
-                  Instagram
-                </h3>
-                <p>
-                  <a
-                    href="https://www.instagram.com/zycont_contabilidade"
-                    target="_blank"
-                    className="hover:text-[#d8bc87] transition"
-                  >
-                    @zycont_contabilidade
-                  </a>
-                </p>
-              </div>
+            <div className="flex flex-wrap gap-4 mb-10">
+              <a
+                href={`https://wa.me/${whatsappNumber}`}
+                target="_blank"
+                className="inline-flex rounded-xl bg-[#b8892d] px-7 py-4 font-semibold text-white shadow-xl transition hover:scale-105 hover:bg-[#9f7425]"
+              >
+                Chamar no WhatsApp
+              </a>
 
-              <div>
-                <h3 className="text-[#d8bc87] font-semibold mb-2">
-                  E-mail
-                </h3>
-                <p>contato.zycont@gmail.com</p>
-              </div>
-
-              <div>
-                <h3 className="text-[#d8bc87] font-semibold mb-2">
-                  Endereço
-                </h3>
-                <p>
-                  Rua Francisco Aldenir de Jesus, 429
-                  <br />
-                  Lagoa do Toco
-                  <br />
-                  Russas/CE
-                  <br />
-                  CEP: 62.905-090
-                </p>
-              </div>
+              <a
+                href="mailto:contato.zycont@gmail.com?subject=Curr%C3%ADculo%20-%20Trabalhe%20Conosco%20Zycont&body=Ol%C3%A1%2C%20equipe%20Zycont.%0A%0ASegue%20meu%20curr%C3%ADculo%20para%20an%C3%A1lise.%0A%0ANome%3A%0ATelefone%3A%0ACidade%2FUF%3A"
+                className="inline-flex rounded-xl border border-[#d8bc87]/45 px-7 py-4 font-semibold text-[#f4e3c2] transition hover:bg-[#d8bc87]/10"
+              >
+                Enviar currículo
+              </a>
             </div>
-          </div>
 
-          <div className="bg-[#1b1b1b] rounded-[30px] p-8 border border-[#d8bc87]/20 flex flex-col justify-between">
-            <div className="space-y-8">
-              <div>
-                <h3 className="text-3xl font-bold mb-5">
-                  Escolha seu atendimento
-                </h3>
-
-                <div className="grid sm:grid-cols-2 gap-3">
-                  {[
-                    "Abrir empresa",
-                    "Trocar de contador",
-                    "Regularizar CNPJ",
-                    "Falar com especialista",
-                  ].map((item) => (
-                    <a
-                      key={item}
-                      href={whatsappLink(item)}
-                      target="_blank"
-                      className="rounded-xl border border-[#d8bc87]/25 bg-black/20 px-4 py-3 text-center font-semibold text-[#f4e3c2] transition hover:border-[#d8bc87]/60 hover:bg-[#d8bc87]/10"
-                    >
-                      {item}
-                    </a>
-                  ))}
-                </div>
-              </div>
-
-              <div id="trabalhe-conosco" className="rounded-2xl border border-[#d8bc87]/15 bg-black/10 p-5 scroll-mt-28">
-                <p className="text-[#d8bc87] font-semibold tracking-[0.18em] text-sm mb-3">
-                  TRABALHE CONOSCO
-                </p>
-                <h3 className="text-xl font-bold mb-3">
-                  Envie seu currículo
-                </h3>
-                <p className="text-gray-300 leading-relaxed mb-5">
-                  Quer fazer parte da equipe Zycont? Envie seu currículo por e-mail para análise.
-                </p>
+            <div className="grid sm:grid-cols-2 gap-3">
+              {[
+                "Abrir empresa",
+                "Trocar de contador",
+                "Regularizar CNPJ",
+                "Falar com especialista",
+              ].map((item) => (
                 <a
-                  href="mailto:contato.zycont@gmail.com?subject=Curr%C3%ADculo%20-%20Trabalhe%20Conosco%20Zycont&body=Ol%C3%A1%2C%20equipe%20Zycont.%0A%0ASegue%20meu%20curr%C3%ADculo%20para%20an%C3%A1lise.%0A%0ANome%3A%0ATelefone%3A%0ACidade%2FUF%3A"
-                  className="inline-flex rounded-xl border border-[#d8bc87]/40 px-5 py-3 font-semibold text-[#f4e3c2] transition hover:bg-[#d8bc87]/10"
-                >
-                  Enviar currículo
-                </a>
-              </div>
-
-              <div>
-                <h3 className="text-3xl font-bold mb-5">
-                  Atendimento rápido
-                </h3>
-
-                <p className="text-gray-300 leading-relaxed mb-6">
-                  Clique abaixo e fale diretamente conosco pelo WhatsApp.
-                </p>
-
-                <a
-                  href={`https://wa.me/${whatsappNumber}`}
+                  key={item}
+                  href={whatsappLink(item)}
                   target="_blank"
-                  className="inline-flex bg-[#b8892d] px-7 py-3 rounded-xl font-semibold hover:scale-105 transition"
+                  className="rounded-xl border border-[#d8bc87]/25 bg-[#111] px-4 py-3 text-center font-semibold text-[#f4e3c2] transition hover:border-[#d8bc87]/60 hover:bg-[#d8bc87]/10"
                 >
-                  Chamar no WhatsApp
+                  {item}
                 </a>
-              </div>
+              ))}
             </div>
 
-            <div className="mt-10 rounded-2xl overflow-hidden border border-[#d8bc87]/20">
-              <iframe
-                src="https://maps.google.com/maps?q=Zycont%20Contabilidade%20Inteligente%20Russas%20CE&t=&z=15&ie=UTF8&iwloc=&output=embed"
-                width="100%"
-                height="260"
-                style={{ border: 0 }}
-                allowFullScreen
-                loading="lazy"
-              ></iframe>
+            <div id="trabalhe-conosco" className="mt-8 scroll-mt-28 rounded-2xl border border-[#d8bc87]/15 bg-[#111] p-5">
+              <p className="text-[#d8bc87] font-semibold tracking-[0.18em] text-sm mb-2">
+                TRABALHE CONOSCO
+              </p>
+              <p className="text-gray-300 leading-relaxed">
+                Quer fazer parte da equipe Zycont? Envie seu currículo pelo botão acima.
+              </p>
             </div>
           </div>
+
+          <BrazilCoverageMap />
         </div>
       </section>
 
