@@ -1,15 +1,121 @@
+import type { ReactElement, SVGProps } from "react";
+
+type ServiceIconName =
+  | "company"
+  | "regularization"
+  | "accounting"
+  | "incomeTax"
+  | "taxConsulting"
+  | "people"
+  | "taxPlanning"
+  | "smallBusiness";
+
+function ServiceIcon({ name }: { name: ServiceIconName }) {
+  const iconProps: SVGProps<SVGSVGElement> = {
+    className: "w-9 h-9",
+    viewBox: "0 0 48 48",
+    fill: "none",
+    xmlns: "http://www.w3.org/2000/svg",
+  };
+
+  const lineProps: SVGProps<SVGPathElement> = {
+    stroke: "currentColor",
+    strokeWidth: 2.2,
+    strokeLinecap: "round",
+    strokeLinejoin: "round",
+  };
+
+  const icons: Record<ServiceIconName, ReactElement> = {
+    company: (
+      <svg {...iconProps}>
+        <path {...lineProps} d="M12 39V18l12-7 12 7v21" />
+        <path {...lineProps} d="M18 39V25h12v14" />
+        <path {...lineProps} d="M16 20h4M28 20h4M16 27h4M28 27h4" />
+        <path {...lineProps} d="M9 39h30" />
+      </svg>
+    ),
+    regularization: (
+      <svg {...iconProps}>
+        <path {...lineProps} d="M14 8h16l6 6v26H14z" />
+        <path {...lineProps} d="M30 8v7h7" />
+        <path {...lineProps} d="M19 28l4 4 8-10" />
+        <path {...lineProps} d="M19 18h7" />
+      </svg>
+    ),
+    accounting: (
+      <svg {...iconProps}>
+        <path {...lineProps} d="M13 9h22v30H13z" />
+        <path {...lineProps} d="M18 15h12" />
+        <path {...lineProps} d="M18 23h4M26 23h4M18 30h4M26 30h4" />
+        <path {...lineProps} d="M18 36h12" />
+      </svg>
+    ),
+    incomeTax: (
+      <svg {...iconProps}>
+        <path {...lineProps} d="M15 8h18l5 7v25H15z" />
+        <path {...lineProps} d="M33 8v8h5" />
+        <path {...lineProps} d="M20 30l8-10" />
+        <circle cx="21" cy="21" r="2.2" fill="currentColor" />
+        <circle cx="29" cy="30" r="2.2" fill="currentColor" />
+      </svg>
+    ),
+    taxConsulting: (
+      <svg {...iconProps}>
+        <path {...lineProps} d="M10 36h28" />
+        <path {...lineProps} d="M14 36V24h6v12" />
+        <path {...lineProps} d="M22 36V18h6v18" />
+        <path {...lineProps} d="M30 36V12h6v24" />
+        <path {...lineProps} d="M12 17l8-5 8 3 9-7" />
+      </svg>
+    ),
+    people: (
+      <svg {...iconProps}>
+        <path {...lineProps} d="M18 21a6 6 0 1 0 0-12 6 6 0 0 0 0 12Z" />
+        <path {...lineProps} d="M8 39c1.5-7 5.2-11 10-11s8.5 4 10 11" />
+        <path {...lineProps} d="M31 22a5 5 0 1 0-1.8-9.6" />
+        <path {...lineProps} d="M30 29c4.5.6 7.8 4 9 10" />
+      </svg>
+    ),
+    taxPlanning: (
+      <svg {...iconProps}>
+        <path {...lineProps} d="M11 39h26" />
+        <path {...lineProps} d="M15 34l7-8 6 5 9-14" />
+        <path {...lineProps} d="M31 17h6v6" />
+        <path {...lineProps} d="M14 10h10" />
+        <path {...lineProps} d="M14 16h6" />
+      </svg>
+    ),
+    smallBusiness: (
+      <svg {...iconProps}>
+        <path {...lineProps} d="M11 22h26l-3-10H14z" />
+        <path {...lineProps} d="M14 22v17h20V22" />
+        <path {...lineProps} d="M19 39V28h10v11" />
+        <path {...lineProps} d="M10 39h28" />
+        <path {...lineProps} d="M16 12V8h16v4" />
+      </svg>
+    ),
+  };
+
+  return (
+    <div className="relative flex h-16 w-16 items-center justify-center rounded-[18px] border border-[#d8bc87]/70 bg-gradient-to-br from-[#fff8eb] via-[#f4e3c2] to-[#b8892d]/20 text-[#b8892d] shadow-[0_18px_35px_rgba(184,137,45,0.22)]">
+      <div className="absolute inset-[5px] rounded-[14px] border border-white/70" />
+      <div className="relative drop-shadow-sm">{icons[name]}</div>
+    </div>
+  );
+}
+
 export default function Home() {
   const whatsappNumber = "5588994939014";
 
-  const services = [
-    { title: "Abertura de Empresa", text: "Abrimos sua empresa de forma rápida, segura e sem burocracia.", icon: "▦" },
-    { title: "Baixa e Regularização", text: "Regularizamos pendências e realizamos baixa empresarial com segurança.", icon: "✓" },
-    { title: "Contabilidade Mensal", text: "Gestão contábil completa para empresas modernas e organizadas.", icon: "▤" },
-    { title: "Imposto de Renda", text: "Declarações para pessoa física e jurídica com agilidade e segurança.", icon: "◷" },
-    { title: "Consultoria Tributária", text: "Estratégias inteligentes para reduzir riscos e melhorar resultados.", icon: "◆" },
-    { title: "Departamento Pessoal", text: "Folha de pagamento, admissões, rescisões e obrigações trabalhistas.", icon: "♙" },
-    { title: "Planejamento Tributário", text: "Planejamento fiscal para empresas pagarem impostos corretamente.", icon: "◎" },
-    { title: "MEI, ME e EPP", text: "Soluções especializadas para pequenos e médios negócios.", icon: "◈" },
+  const services: Array<{ title: string; text: string; icon: ServiceIconName }> = [
+    { title: "Abertura de Empresa", text: "Abrimos sua empresa de forma rápida, segura e sem burocracia.", icon: "company" },
+    { title: "Baixa e Regularização", text: "Regularizamos pendências e realizamos baixa empresarial com segurança.", icon: "regularization" },
+    { title: "Contabilidade Mensal", text: "Gestão contábil completa para empresas modernas e organizadas.", icon: "accounting" },
+    { title: "Imposto de Renda", text: "Declarações para pessoa física e jurídica com agilidade e segurança.", icon: "incomeTax" },
+    { title: "Consultoria Tributária", text: "Estratégias inteligentes para reduzir riscos e melhorar resultados.", icon: "taxConsulting" },
+    { title: "Departamento Pessoal", text: "Folha de pagamento, admissões, rescisões e obrigações trabalhistas.", icon: "people" },
+    { title: "Planejamento Tributário", text: "Planejamento fiscal para empresas pagarem impostos corretamente.", icon: "taxPlanning" },
+    { title: "MEI, ME e EPP", text: "Soluções especializadas para pequenos e médios negócios.", icon: "smallBusiness" },
   ];
 
   const diferenciais = [
@@ -194,10 +300,8 @@ export default function Home() {
                 key={service.title}
                 className="bg-white rounded-[28px] p-8 border border-[#eadfce] shadow-sm hover:shadow-2xl hover:-translate-y-2 transition duration-300 flex flex-col"
               >
-                <div className="w-16 h-16 rounded-2xl bg-[#f3eadb] mb-6 flex items-center justify-center border border-[#ead7b8] shadow-sm">
-                  <span className="text-[#b8892d] text-3xl font-bold">
-                    {service.icon}
-                  </span>
+                <div className="mb-6">
+                  <ServiceIcon name={service.icon} />
                 </div>
 
                 <h3 className="text-2xl font-bold mb-5 leading-snug min-h-[70px]">
