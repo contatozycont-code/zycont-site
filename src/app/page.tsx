@@ -123,62 +123,11 @@ function BrazilCoverageMap() {
           </div>
         </div>
 
-        <svg
-          viewBox="0 0 460 420"
-          className="mx-auto h-[360px] w-full max-w-[460px]"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-          aria-label="Mapa do Brasil com destaque para Russas no Ceará"
-        >
-          <path
-            d="M173 45 218 38 246 55 286 50 309 73 352 74 393 100 420 132 405 162 369 171 348 198 357 229 335 258 319 296 286 313 268 354 232 384 196 366 178 329 143 316 118 284 82 269 73 230 92 199 72 167 95 132 128 121 137 84 173 45Z"
-            className="fill-[#1a1a1a] stroke-[#d8bc87]"
-            strokeWidth="3"
-          />
-          <path
-            d="M154 88c54 34 94 76 120 126 22 43 33 90 33 140"
-            className="stroke-[#d8bc87]/35"
-            strokeWidth="2"
-            strokeLinecap="round"
-          />
-          <path
-            d="M91 205c76-13 147-4 213 25"
-            className="stroke-[#d8bc87]/25"
-            strokeWidth="2"
-            strokeLinecap="round"
-          />
-          <path
-            d="M292 66h96c7 0 12 5 12 12v24c0 7-5 12-12 12h-96c-7 0-12-5-12-12V78c0-7 5-12 12-12Z"
-            className="fill-black/60 stroke-[#d8bc87]/35"
-            strokeWidth="2"
-          />
-          <text x="301" y="96" className="fill-[#f4e3c2] text-[17px] font-bold">
-            Russas/CE
-          </text>
-          <path
-            d="M323 116 343 137"
-            className="stroke-[#d8bc87]"
-            strokeWidth="2"
-            strokeLinecap="round"
-          />
-          <path
-            d="M343 112c-9 0-16 7-16 16 0 12 16 29 16 29s16-17 16-29c0-9-7-16-16-16Z"
-            className="fill-[#b8892d] stroke-[#f4e3c2]"
-            strokeWidth="2"
-          />
-          <circle cx="343" cy="128" r="5" className="fill-white" />
-          <circle cx="343" cy="128" r="24" className="stroke-[#d8bc87]/35" strokeWidth="2" />
-          <path
-            d="M343 148c-52 15-104 45-154 90-37 34-64 69-81 105"
-            className="stroke-[#d8bc87]/40"
-            strokeWidth="2"
-            strokeDasharray="6 9"
-            strokeLinecap="round"
-          />
-          <circle cx="108" cy="343" r="6" className="fill-[#f4e3c2]" />
-          <circle cx="189" cy="238" r="6" className="fill-[#f4e3c2]" />
-          <circle cx="307" cy="354" r="6" className="fill-[#f4e3c2]" />
-        </svg>
+        <img
+          src="/brazil-map.svg"
+          alt="Mapa do Brasil com destaque para a base da Zycont em Russas, Ceará"
+          className="mx-auto h-[360px] w-full max-w-[430px] object-contain"
+        />
 
         <div className="grid sm:grid-cols-2 gap-4">
           <div className="rounded-2xl border border-[#d8bc87]/20 bg-black/20 p-5">
