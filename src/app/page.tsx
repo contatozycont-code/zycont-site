@@ -450,6 +450,16 @@ export default function Home() {
               </div>
             ))}
           </div>
+
+          <div className="mt-10 flex justify-center">
+            <a
+              href={whatsappLink("Certificado Digital")}
+              target="_blank"
+              className="inline-flex w-full justify-center rounded-xl border border-[#b8892d] bg-[#111] px-7 py-4 font-semibold text-[#f4e3c2] shadow-xl transition duration-300 hover:scale-[1.02] hover:bg-[#1a1a1a] sm:w-auto"
+            >
+              Solicitar certificado digital
+            </a>
+          </div>
         </div>
       </section>
 
