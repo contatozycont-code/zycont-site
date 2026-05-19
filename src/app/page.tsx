@@ -107,7 +107,7 @@ function ServiceIcon({ name }: { name: ServiceIconName }) {
 
 function BrazilCoverageMap() {
   const mapsLink =
-    "https://www.google.com/maps/search/?api=1&query=Rua%20Francisco%20Aldenir%20de%20Jesus%20429%20Lagoa%20do%20Toco%20Russas%20CE";
+    "https://maps.app.goo.gl/W5nKzVLtPupPjTsJ9";
 
   return (
     <div className="relative overflow-hidden rounded-[30px] border border-[#d8bc87]/20 bg-[#111] p-8 shadow-2xl">
