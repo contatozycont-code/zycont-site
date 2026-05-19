@@ -106,6 +106,9 @@ function ServiceIcon({ name }: { name: ServiceIconName }) {
 }
 
 function BrazilCoverageMap() {
+  const mapsLink =
+    "https://www.google.com/maps/search/?api=1&query=Rua%20Francisco%20Aldenir%20de%20Jesus%20429%20Lagoa%20do%20Toco%20Russas%20CE";
+
   return (
     <div className="relative overflow-hidden rounded-[30px] border border-[#d8bc87]/20 bg-[#111] p-8 shadow-2xl">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_75%_20%,rgba(216,188,135,0.18),transparent_32%)]" />
@@ -138,6 +141,35 @@ function BrazilCoverageMap() {
             <p className="text-gray-300">
               Russas/CE
             </p>
+            <a
+              href={mapsLink}
+              target="_blank"
+              className="mt-5 inline-flex w-full items-center justify-center gap-2 rounded-md bg-[#d8bc87] px-5 py-3 text-sm font-bold text-[#111] shadow-[0_16px_35px_rgba(216,188,135,0.28)] transition hover:bg-[#f4e3c2] hover:scale-[1.02] sm:w-auto"
+            >
+              <svg
+                className="h-4 w-4"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true"
+              >
+                <path
+                  d="M12 21s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12Z"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+                <path
+                  d="M12 11.5a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+              Ver no Google Maps
+            </a>
           </div>
           <div className="rounded-2xl border border-[#d8bc87]/20 bg-black/20 p-5">
             <p className="text-[#d8bc87] font-semibold mb-2">
