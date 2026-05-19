@@ -272,14 +272,22 @@ export default function Home() {
             <a
               href="https://consulta-cnpj-nu.vercel.app/"
               target="_blank"
-              className="w-full sm:w-auto text-center bg-[#b8892d] text-white px-8 sm:px-10 py-4 sm:py-5 rounded-xl font-semibold shadow-xl hover:scale-105 transition duration-300"
+              className="w-full sm:w-auto text-center bg-[#b8892d] text-white px-8 sm:px-10 py-4 sm:py-5 rounded-md font-semibold shadow-xl hover:scale-105 transition duration-300"
             >
               CONSULTAR CNPJ
             </a>
 
             <a
+              href="https://www8.receita.fazenda.gov.br/SimplesNacional/Aplicacoes/ATSPO/pgmei.app/Identificacao?lang=pt"
+              target="_blank"
+              className="w-full sm:w-auto text-center bg-[#b8892d] text-white px-8 sm:px-10 py-4 sm:py-5 rounded-md font-semibold shadow-xl hover:scale-105 transition duration-300"
+            >
+              EMITIR DAS-MEI
+            </a>
+
+            <a
               href="#servicos"
-              className="w-full sm:w-auto text-center border border-[#b8892d] text-[#b8892d] px-8 sm:px-10 py-4 sm:py-5 rounded-xl font-semibold hover:bg-[#b8892d]/10 hover:scale-105 transition duration-300"
+              className="w-full sm:w-auto text-center border border-[#b8892d] text-[#b8892d] px-8 sm:px-10 py-4 sm:py-5 rounded-md font-semibold hover:bg-[#b8892d]/10 hover:scale-105 transition duration-300"
             >
               Conhecer serviços →
             </a>
@@ -291,7 +299,7 @@ export default function Home() {
                 key={item}
                 href={whatsappLink(item)}
                 target="_blank"
-                className="rounded-full border border-[#d8bc87] bg-white/55 px-5 py-3 text-sm font-semibold text-[#6d5221] shadow-sm transition hover:border-[#b8892d] hover:bg-white"
+                className="rounded-md border border-[#d8bc87] bg-white/55 px-5 py-3 text-sm font-semibold text-[#6d5221] shadow-sm transition hover:border-[#b8892d] hover:bg-white"
               >
                 {item}
               </a>
