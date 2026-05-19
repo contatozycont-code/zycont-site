@@ -1,4 +1,5 @@
 import type { ReactElement, SVGProps } from "react";
+import ActiveHeaderNav from "./ActiveHeaderNav";
 
 type ServiceIconName =
   | "company"
@@ -215,9 +216,9 @@ export default function Home() {
   }
 
   return (
-    <main className="bg-[#f7f1e8] text-[#111] overflow-hidden scroll-smooth">
+    <main className="bg-[#f7f1e8] text-[#111] overflow-x-hidden scroll-smooth">
       <style>{`
-        html { scroll-behavior: smooth; }
+        html { scroll-behavior: smooth; scroll-padding-top: 112px; }
 
         @keyframes fadeUp {
           from { opacity: 0; transform: translateY(35px); }
@@ -233,27 +234,25 @@ export default function Home() {
         .float-image { animation: floatImage 5s ease-in-out infinite; }
       `}</style>
 
-      <header className="max-w-7xl mx-auto px-5 sm:px-8 py-6 sm:py-8 flex items-center justify-between fade-up">
-        <img src="/logo.png" alt="Zycont" className="w-56 max-w-full sm:w-72 xl:w-[420px]" />
+      <header className="fixed inset-x-0 top-0 z-50 border-b border-[#eadfce]/80 bg-[#f7f1e8]/95 shadow-sm backdrop-blur-md">
+        <div className="max-w-7xl mx-auto px-5 sm:px-8 py-4 sm:py-5 flex items-center justify-between fade-up">
+          <a href="#inicio" aria-label="Ir para o início">
+            <img src="/logo.png" alt="Zycont" className="w-52 max-w-full sm:w-64 xl:w-[380px]" />
+          </a>
 
-        <nav className="hidden lg:flex gap-6 xl:gap-8 text-base xl:text-lg font-medium">
-          <a href="#inicio" className="text-[#b8892d]">Início</a>
-          <a href="#servicos">Serviços</a>
-          <a href="#sobre">Sobre</a>
-          <a href="#trabalhe-conosco">Trabalhe conosco</a>
-          <a href="#contato">Fale conosco</a>
-        </nav>
+          <ActiveHeaderNav />
 
-        <a
-          href="https://onvio.com.br/clientcenter/pt/auth?r=%2Fhome"
-          target="_blank"
-          className="hidden xl:flex bg-[#b8892d] text-white px-8 py-4 rounded-xl font-semibold shadow-xl hover:scale-105 hover:shadow-2xl transition duration-300"
-        >
-          JÁ SOU CLIENTE
-        </a>
+          <a
+            href="https://onvio.com.br/clientcenter/pt/auth?r=%2Fhome"
+            target="_blank"
+            className="hidden xl:flex bg-[#b8892d] text-white px-8 py-4 rounded-xl font-semibold shadow-xl hover:scale-105 hover:shadow-2xl transition duration-300"
+          >
+            JÁ SOU CLIENTE
+          </a>
+        </div>
       </header>
 
-      <section id="inicio" className="max-w-7xl mx-auto px-5 sm:px-8 pt-6 sm:pt-10 pb-16 sm:pb-24 grid md:grid-cols-2 gap-12 md:gap-20 items-center">
+      <section id="inicio" className="max-w-7xl mx-auto px-5 sm:px-8 pt-28 sm:pt-32 xl:pt-36 pb-16 sm:pb-24 grid md:grid-cols-2 gap-12 md:gap-20 items-center">
         <div className="fade-up">
           <p className="text-[#b8892d] text-sm sm:text-base tracking-[0.2em] sm:tracking-[0.35em] font-semibold mb-6">
             CONTABILIDADE INTELIGENTE
