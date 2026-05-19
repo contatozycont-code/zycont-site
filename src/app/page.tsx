@@ -126,7 +126,7 @@ function BrazilCoverageMap() {
         <img
           src="/brazil-map.svg"
           alt="Mapa do Brasil com destaque para a base da Zycont em Russas, Ceará"
-          className="mx-auto h-[360px] w-full max-w-[430px] object-contain"
+          className="mx-auto h-[280px] w-full max-w-[430px] object-contain sm:h-[360px]"
         />
 
         <div className="grid sm:grid-cols-2 gap-4">
@@ -232,10 +232,10 @@ export default function Home() {
         .float-image { animation: floatImage 5s ease-in-out infinite; }
       `}</style>
 
-      <header className="max-w-7xl mx-auto px-8 py-8 flex items-center justify-between fade-up">
-        <img src="/logo.png" alt="Zycont" className="w-[420px]" />
+      <header className="max-w-7xl mx-auto px-5 sm:px-8 py-6 sm:py-8 flex items-center justify-between fade-up">
+        <img src="/logo.png" alt="Zycont" className="w-56 max-w-full sm:w-72 xl:w-[420px]" />
 
-        <nav className="hidden md:flex gap-8 text-lg font-medium">
+        <nav className="hidden lg:flex gap-6 xl:gap-8 text-base xl:text-lg font-medium">
           <a href="#inicio" className="text-[#b8892d]">Início</a>
           <a href="#servicos">Serviços</a>
           <a href="#sobre">Sobre</a>
@@ -246,25 +246,25 @@ export default function Home() {
         <a
           href={`https://wa.me/${whatsappNumber}`}
           target="_blank"
-          className="hidden md:flex bg-[#b8892d] text-white px-8 py-4 rounded-xl font-semibold shadow-xl hover:scale-105 hover:shadow-2xl transition duration-300"
+          className="hidden xl:flex bg-[#b8892d] text-white px-8 py-4 rounded-xl font-semibold shadow-xl hover:scale-105 hover:shadow-2xl transition duration-300"
         >
           Falar com especialista
         </a>
       </header>
 
-      <section id="inicio" className="max-w-7xl mx-auto px-8 pt-10 pb-24 grid md:grid-cols-2 gap-20 items-center">
+      <section id="inicio" className="max-w-7xl mx-auto px-5 sm:px-8 pt-6 sm:pt-10 pb-16 sm:pb-24 grid md:grid-cols-2 gap-12 md:gap-20 items-center">
         <div className="fade-up">
-          <p className="text-[#b8892d] tracking-[0.35em] font-semibold mb-6">
+          <p className="text-[#b8892d] text-sm sm:text-base tracking-[0.2em] sm:tracking-[0.35em] font-semibold mb-6">
             CONTABILIDADE INTELIGENTE
           </p>
 
-          <h1 className="text-6xl md:text-7xl font-bold leading-tight mb-10">
+          <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold leading-tight mb-8 sm:mb-10">
             Soluções modernas para sua empresa crescer.
           </h1>
 
           <div className="w-20 h-1 bg-[#b8892d] mb-10" />
 
-          <p className="text-[#3b342d] text-2xl leading-relaxed max-w-xl mb-12">
+          <p className="text-[#3b342d] text-xl sm:text-2xl leading-relaxed max-w-xl mb-10 sm:mb-12">
             Atendimento premium, suporte estratégico e soluções contábeis completas para empresas e profissionais que desejam crescer com segurança.
           </p>
 
@@ -272,14 +272,14 @@ export default function Home() {
             <a
               href={`https://wa.me/${whatsappNumber}`}
               target="_blank"
-              className="bg-[#b8892d] text-white px-10 py-5 rounded-xl font-semibold shadow-xl hover:scale-105 transition duration-300"
+              className="w-full sm:w-auto text-center bg-[#b8892d] text-white px-8 sm:px-10 py-4 sm:py-5 rounded-xl font-semibold shadow-xl hover:scale-105 transition duration-300"
             >
               Falar com especialista
             </a>
 
             <a
               href="#servicos"
-              className="border border-[#b8892d] text-[#b8892d] px-10 py-5 rounded-xl font-semibold hover:bg-[#b8892d]/10 hover:scale-105 transition duration-300"
+              className="w-full sm:w-auto text-center border border-[#b8892d] text-[#b8892d] px-8 sm:px-10 py-4 sm:py-5 rounded-xl font-semibold hover:bg-[#b8892d]/10 hover:scale-105 transition duration-300"
             >
               Conhecer serviços →
             </a>
@@ -300,24 +300,24 @@ export default function Home() {
         </div>
 
         <div className="relative flex justify-center fade-up">
-          <div className="absolute top-10 right-[-30px] w-[520px] h-[620px] border border-[#d8bc87] rounded-[40px] rotate-6" />
+          <div className="hidden sm:block absolute top-10 right-0 w-[82%] max-w-[520px] h-[92%] border border-[#d8bc87] rounded-[40px] rotate-6" />
 
           <img
             src="/bruno.jpeg"
             alt="Bruno Oliveira"
-            className="relative w-[520px] rounded-[35px] shadow-2xl object-cover float-image"
+            className="relative w-full max-w-[520px] rounded-[24px] sm:rounded-[35px] shadow-2xl object-cover float-image"
           />
         </div>
       </section>
 
       <section className="py-24 bg-[#111] text-white">
-        <div className="max-w-7xl mx-auto px-8">
+        <div className="max-w-7xl mx-auto px-5 sm:px-8">
           <div className="text-center mb-16 fade-up">
-            <p className="text-[#d8bc87] tracking-[0.3em] font-semibold mb-4">
+            <p className="text-[#d8bc87] text-sm sm:text-base tracking-[0.2em] sm:tracking-[0.3em] font-semibold mb-4">
               DIFERENCIAIS
             </p>
 
-            <h2 className="text-5xl font-bold">
+            <h2 className="text-4xl md:text-5xl font-bold">
               Por que escolher a Zycont?
             </h2>
           </div>
@@ -346,14 +346,14 @@ export default function Home() {
       </section>
 
       <section className="py-20 bg-[#f7f1e8]">
-        <div className="max-w-7xl mx-auto px-8">
+        <div className="max-w-7xl mx-auto px-5 sm:px-8">
           <div className="bg-white rounded-[36px] border border-[#eadfce] shadow-xl p-10 grid md:grid-cols-4 gap-8 text-center">
             {numeros.map((item) => (
               <div
                 key={item.label}
                 className="border-[#eadfce] md:border-r last:border-r-0"
               >
-                <h3 className="text-5xl font-bold text-[#b8892d] mb-3">
+                <h3 className="text-4xl md:text-5xl font-bold text-[#b8892d] mb-3">
                   {item.number}
                 </h3>
 
@@ -367,13 +367,13 @@ export default function Home() {
       </section>
 
       <section className="py-20 bg-white/60">
-        <div className="max-w-7xl mx-auto px-8">
+        <div className="max-w-7xl mx-auto px-5 sm:px-8">
           <div className="grid lg:grid-cols-[0.9fr_1.1fr] gap-12 items-start">
             <div>
-              <p className="text-[#b8892d] tracking-[0.3em] font-semibold mb-4">
+              <p className="text-[#b8892d] text-sm sm:text-base tracking-[0.2em] sm:tracking-[0.3em] font-semibold mb-4">
                 PARA QUEM ATENDEMOS
               </p>
-              <h2 className="text-5xl font-bold leading-tight mb-6">
+              <h2 className="text-4xl md:text-5xl font-bold leading-tight mb-6">
                 Soluções para empresas de diferentes portes
               </h2>
               <p className="text-[#5f574d] text-xl leading-relaxed">
@@ -396,7 +396,7 @@ export default function Home() {
       </section>
 
       <section className="bg-[#111] py-12 text-white">
-        <div className="max-w-7xl mx-auto px-8 grid md:grid-cols-3 gap-6">
+        <div className="max-w-7xl mx-auto px-5 sm:px-8 grid md:grid-cols-3 gap-6">
           {confianca.map((item) => (
             <div
               key={item}
@@ -409,13 +409,13 @@ export default function Home() {
       </section>
 
       <section id="servicos" className="py-24 bg-white/60">
-        <div className="max-w-7xl mx-auto px-8">
+        <div className="max-w-7xl mx-auto px-5 sm:px-8">
           <div className="text-center mb-16">
-            <p className="text-[#b8892d] tracking-[0.3em] font-semibold mb-4">
+            <p className="text-[#b8892d] text-sm sm:text-base tracking-[0.2em] sm:tracking-[0.3em] font-semibold mb-4">
               SERVIÇOS
             </p>
 
-            <h2 className="text-5xl font-bold">
+            <h2 className="text-4xl md:text-5xl font-bold">
               Soluções completas para sua empresa
             </h2>
           </div>
@@ -454,13 +454,13 @@ export default function Home() {
       </section>
 
       <section className="py-24 bg-[#f7f1e8]">
-        <div className="max-w-7xl mx-auto px-8">
+        <div className="max-w-7xl mx-auto px-5 sm:px-8">
           <div className="text-center mb-16">
-            <p className="text-[#b8892d] tracking-[0.3em] font-semibold mb-4">
+            <p className="text-[#b8892d] text-sm sm:text-base tracking-[0.2em] sm:tracking-[0.3em] font-semibold mb-4">
               DEPOIMENTOS
             </p>
 
-            <h2 className="text-5xl font-bold">
+            <h2 className="text-4xl md:text-5xl font-bold">
               O que dizem sobre a Zycont
             </h2>
           </div>
@@ -490,21 +490,21 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="sobre" className="max-w-7xl mx-auto px-8 py-24 grid md:grid-cols-2 gap-20 items-center">
+      <section id="sobre" className="max-w-7xl mx-auto px-5 sm:px-8 py-16 sm:py-24 grid md:grid-cols-2 gap-12 md:gap-20 items-center">
         <div className="relative">
           <div className="absolute inset-0 bg-[#b8892d]/10 blur-3xl rounded-[40px]" />
 
           <img
             src="/sobre.jpeg"
             alt="Sobre Bruno Oliveira"
-            className="relative rounded-[35px] shadow-2xl"
+            className="relative w-full rounded-[24px] sm:rounded-[35px] shadow-2xl"
           />
 
-          <div className="absolute left-6 right-6 bottom-6 rounded-2xl border border-[#d8bc87]/40 bg-[#111]/90 px-6 py-5 text-white shadow-2xl backdrop-blur-md">
+          <div className="absolute left-4 right-4 bottom-4 sm:left-6 sm:right-6 sm:bottom-6 rounded-2xl border border-[#d8bc87]/40 bg-[#111]/90 px-4 sm:px-6 py-4 sm:py-5 text-white shadow-2xl backdrop-blur-md">
             <p className="text-[#d8bc87] text-sm font-semibold tracking-[0.22em] mb-2">
               CONTADOR RESPONSÁVEL
             </p>
-            <h3 className="text-2xl font-bold leading-tight">
+            <h3 className="text-xl sm:text-2xl font-bold leading-tight">
               Bruno Oliveira
             </h3>
             <p className="mt-1 text-[#f4e3c2] font-semibold">
@@ -514,11 +514,11 @@ export default function Home() {
         </div>
 
         <div>
-          <p className="text-[#b8892d] tracking-[0.3em] font-semibold mb-4">
+          <p className="text-[#b8892d] text-sm sm:text-base tracking-[0.2em] sm:tracking-[0.3em] font-semibold mb-4">
             SOBRE A ZYCONT
           </p>
 
-          <h2 className="text-5xl font-bold mb-8">
+          <h2 className="text-4xl md:text-5xl font-bold mb-8">
             Contabilidade estratégica e moderna
           </h2>
 
@@ -533,13 +533,13 @@ export default function Home() {
       </section>
 
       <section className="py-24 bg-[#111] text-white">
-        <div className="max-w-5xl mx-auto px-8">
+        <div className="max-w-5xl mx-auto px-5 sm:px-8">
           <div className="text-center mb-16">
-            <p className="text-[#d8bc87] tracking-[0.3em] font-semibold mb-4">
+            <p className="text-[#d8bc87] text-sm sm:text-base tracking-[0.2em] sm:tracking-[0.3em] font-semibold mb-4">
               FAQ
             </p>
 
-            <h2 className="text-5xl font-bold">
+            <h2 className="text-4xl md:text-5xl font-bold">
               Perguntas frequentes
             </h2>
           </div>
@@ -572,13 +572,13 @@ export default function Home() {
       </section>
 
       <section id="contato" className="bg-black text-white py-24 border-t border-[#d8bc87]/10">
-        <div className="max-w-7xl mx-auto px-8 grid lg:grid-cols-[0.9fr_1.1fr] gap-16 items-center">
+        <div className="max-w-7xl mx-auto px-5 sm:px-8 grid lg:grid-cols-[0.9fr_1.1fr] gap-12 lg:gap-16 items-center">
           <div>
-            <p className="text-[#d8bc87] tracking-[0.3em] font-semibold mb-4">
+            <p className="text-[#d8bc87] text-sm sm:text-base tracking-[0.2em] sm:tracking-[0.3em] font-semibold mb-4">
               FALE CONOSCO
             </p>
 
-            <h2 className="text-5xl font-bold leading-tight mb-8">
+            <h2 className="text-4xl md:text-5xl font-bold leading-tight mb-8">
               Atendimento contábil online para empresas em todo o Brasil
             </h2>
 
@@ -590,14 +590,14 @@ export default function Home() {
               <a
                 href={`https://wa.me/${whatsappNumber}`}
                 target="_blank"
-                className="inline-flex rounded-xl bg-[#b8892d] px-7 py-4 font-semibold text-white shadow-xl transition hover:scale-105 hover:bg-[#9f7425]"
+                className="inline-flex w-full justify-center rounded-xl bg-[#b8892d] px-7 py-4 font-semibold text-white shadow-xl transition hover:scale-105 hover:bg-[#9f7425] sm:w-auto"
               >
                 Chamar no WhatsApp
               </a>
 
               <a
                 href="mailto:contato.zycont@gmail.com?subject=Curr%C3%ADculo%20-%20Trabalhe%20Conosco%20Zycont&body=Ol%C3%A1%2C%20equipe%20Zycont.%0A%0ASegue%20meu%20curr%C3%ADculo%20para%20an%C3%A1lise.%0A%0ANome%3A%0ATelefone%3A%0ACidade%2FUF%3A"
-                className="inline-flex rounded-xl border border-[#d8bc87]/45 px-7 py-4 font-semibold text-[#f4e3c2] transition hover:bg-[#d8bc87]/10"
+                className="inline-flex w-full justify-center rounded-xl border border-[#d8bc87]/45 px-7 py-4 font-semibold text-[#f4e3c2] transition hover:bg-[#d8bc87]/10 sm:w-auto"
               >
                 Enviar currículo
               </a>
@@ -636,10 +636,10 @@ export default function Home() {
       </section>
 
       <footer className="bg-black text-gray-300 pt-20 pb-8">
-        <div className="max-w-7xl mx-auto px-8">
+        <div className="max-w-7xl mx-auto px-5 sm:px-8">
           <div className="grid md:grid-cols-4 gap-12 pb-14 border-b border-white/10">
             <div className="md:col-span-2">
-              <img src="/logo.png" alt="Zycont" className="w-[320px] mb-8" />
+              <img src="/logo.png" alt="Zycont" className="w-56 max-w-full sm:w-[320px] mb-8" />
 
               <p className="text-gray-400 text-lg leading-relaxed max-w-xl">
                 Contabilidade inteligente, moderna e estratégica para empresas que desejam crescer com segurança, organização e suporte profissional.
