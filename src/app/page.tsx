@@ -245,11 +245,11 @@ export default function Home() {
         </nav>
 
         <a
-          href={`https://wa.me/${whatsappNumber}`}
+          href="https://onvio.com.br/clientcenter/pt/auth?r=%2Fhome"
           target="_blank"
           className="hidden xl:flex bg-[#b8892d] text-white px-8 py-4 rounded-xl font-semibold shadow-xl hover:scale-105 hover:shadow-2xl transition duration-300"
         >
-          Falar com especialista
+          JÁ SOU CLIENTE
         </a>
       </header>
 
@@ -271,11 +271,11 @@ export default function Home() {
 
           <div className="flex gap-5 flex-wrap">
             <a
-              href="https://onvio.com.br/clientcenter/pt/auth?r=%2Fhome"
+              href="https://consulta-cnpj-nu.vercel.app/"
               target="_blank"
               className="w-full sm:w-auto text-center bg-[#b8892d] text-white px-8 sm:px-10 py-4 sm:py-5 rounded-xl font-semibold shadow-xl hover:scale-105 transition duration-300"
             >
-              JÁ SOU CLIENTE
+              CONSULTAR CNPJ
             </a>
 
             <a
