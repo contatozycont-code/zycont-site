@@ -41,7 +41,7 @@ export default function ActiveHeaderNav() {
   }, []);
 
   return (
-    <nav className="hidden lg:flex gap-6 xl:gap-8 text-base xl:text-lg font-medium">
+    <nav className="hidden xl:flex gap-6 xl:gap-8 text-base xl:text-lg font-medium">
       {navItems.map((item) => {
         const isActive = activeSection === item.id;
 

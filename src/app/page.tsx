@@ -267,9 +267,9 @@ export default function Home() {
       `}</style>
 
       <header className="fixed inset-x-0 top-0 z-50 border-b border-[#eadfce]/80 bg-[#f7f1e8]/95 shadow-sm backdrop-blur-md">
-        <div className="max-w-7xl mx-auto px-5 sm:px-8 py-4 sm:py-5 flex items-center justify-between fade-up">
-          <a href="#inicio" aria-label="Ir para o início">
-            <img src="/logo.png" alt="Zycont" className="w-52 max-w-full sm:w-64 xl:w-[380px]" />
+        <div className="max-w-7xl mx-auto px-4 sm:px-8 py-3 sm:py-5 flex items-center justify-between gap-3 fade-up">
+          <a href="#inicio" aria-label="Ir para o início" className="min-w-0">
+            <img src="/logo.png" alt="Zycont" className="w-36 max-w-full sm:w-56 xl:w-[340px]" />
           </a>
 
           <ActiveHeaderNav />
@@ -277,7 +277,7 @@ export default function Home() {
           <a
             href="https://onvio.com.br/clientcenter/pt/auth?r=%2Fhome"
             target="_blank"
-            className="hidden xl:flex bg-[#b8892d] text-white px-8 py-4 rounded-xl font-semibold shadow-xl hover:scale-105 hover:shadow-2xl transition duration-300"
+            className="flex shrink-0 bg-[#b8892d] text-white px-3 py-2 text-xs sm:px-5 sm:py-3 sm:text-sm xl:px-8 xl:py-4 xl:text-base rounded-md font-semibold shadow-xl hover:scale-105 hover:shadow-2xl transition duration-300"
           >
             JÁ SOU CLIENTE
           </a>
