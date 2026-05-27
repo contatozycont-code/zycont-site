@@ -343,7 +343,7 @@ export default function Home() {
           <div className="hidden sm:block absolute top-10 right-0 w-[82%] max-w-[520px] h-[92%] border border-[#d8bc87] rounded-[40px] rotate-6" />
 
           <img
-            src="/bruno.jpeg"
+            src="/bruno-hero.png"
             alt="Bruno Oliveira"
             className="relative w-full max-w-[520px] rounded-[24px] sm:rounded-[35px] shadow-2xl object-cover float-image"
           />
